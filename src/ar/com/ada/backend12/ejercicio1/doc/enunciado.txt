@@ -1,0 +1,41 @@
+Se quiere modelar el comportamiento de una biblioteca en la cual se prestan libros y revistas, además de cubículos para su lectura e investigacion.
+
+Los libros tienen la siguiente informacion:
+    Codigo: Valor alfanumerico de 8 caracteres.
+    Titulo: Valor alfanumerico.
+    Año de publicacion: Valor numerico.
+
+
+Las revistas tienen la siguiente informacion:
+    Codigo: Valor alfanumerico de 8 caracteres.
+    Titulo: Valor alfanumerico.
+    Volumnen: Valor numerico que pude ir desde el 1 hasta infinito.
+    Numero: Valor numerico que puede ir desde el 1 hasta el 12.
+Los cubiculos tienen la siguiente información:
+    Numero: Valor numerico de tres digitos iniciando en el 100.
+    Tipo de luz: Admite los valores NATURAL y ARTIFICIAL.
+    Computador: Indica si el cubiculo tiene o no un computador.
+
+Tanto los libros como las revistas y los cubiculos son PRESTABLES. Deben poder ser prestado y devueltos a la biblioteca.
+
+    Se pueden prestar libros y/o revistas solos.
+    Se puden prestar libros y/o revistas ademas de un cubiculo.
+    Se pueden prestar cubiculos solos.
+Cuando alguno de los anteriores se presta, se toma el nombre de la persona a la que se le presto, su numero telefonico y la fecha en la cual se hizo el prestamo.
+
+---
+
+Se desea desarrollar un progrma OO en Java que modele el comportamiento de la biblioteca.
+
+En nuestro programa principal, al iniciar ya debemos contar con una coleccion de libros, revistas y cubiculos. Es decir, estos objetos estarán hardcoded en nuestro codigo. Ademas ninguno estará prestado al inicio del programa.
+Debemos simular el prestar y devolver libros, revistas y cubiculos.
+
+Debemos poder imprimir en cualquier momento la lista de libros, la lista de revistas y la lista de cubiculos incluyendo su informacion de prestamo.
+
+Se debe ademas poder consultar en cualquier momento un libro o revista por su código o un cubiculo por su numero y debemos obtener toda su informacion incluyendo su informacion de prestamo.
+
+Resuelva el problema anterior utilizando todo lo aprendido durante el curso.
+
+Evalue las herramientas a utilizar: Clases, enumeraciones, interfaces, herencia, colecciones, etc.
+
+Podria necesitar utilizar mas clases de las que se "evidencian" en el enunciado. 
