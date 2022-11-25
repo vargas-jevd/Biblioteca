@@ -1,0 +1,32 @@
+El programa actual no tiene un main.
+
+Vamos a desarrollar un main creando primeramente una rama en git para este desarrollo.
+
+Cuando el programa inicia, debe mostrar el siguiente menú:
+
+	1.  Listar libros.
+	2.  Listar revistas.
+	3.  Listar cubiculos.
+	4.  Prestar libro.
+	5.  Prestar revista.
+	6.  Prestar cubiculo.
+	7.  Devolver libro.
+	8.  Devolver revista.
+	9.  Devolver cubiculo.
+	10. Salir.
+
+Las opciones 1, 2 y 3 debe listar todos los libros, revistas y cubiculos respectivamente.
+
+Las opciones 4, 5 y 6 deben solicitar el codigo del libro/revista o numero de cubiculo a prestar, el nombre y numero telefonico de la persona que solicita.
+
+	Al momento de prestar algún libro, revista o cubiculo se debe registrar la fecha y hora del prestamo.
+
+	No se puede prestar un libro/revista/cubiculo que ya ha sido prestado.
+
+Las opciones 7, 8 y 9 deben solicitar el codigo del libro/revista o numero de cubiculo a devolver.
+
+	No se puede devolver un libro que no ha sido prestado.
+	
+Una vez culminada cualquier opción, se debe reimprimir el menu principal en consola hasta que el usuario seleccione la opción 10. Salir.
+
+Una vez culminado (y probado) el desarrollo, hacer merge de la rama a la rama principal del repositorio. 
