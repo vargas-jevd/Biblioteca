@@ -40,6 +40,14 @@ public class BibliotecaMain {
 				break;
 
 			case "4":
+				// Prestar Libro
+				codigo = obtenerCodigo();
+				nombreDelPrestatario = obtenerNombreDelPrestatario();
+				telefonoDelPrestatario = obtenerTelefonoPrestatario();
+				fechaDelPrestamo = obtenerFechaPrestamo();
+
+				sanMartin.prestarLibro(codigo,nombreDelPrestatario,telefonoDelPrestatario,fechaDelPrestamo);
+				System.out.println(sanMartin.obtenerInfoLibro(codigo));
 				break;
 
 			case "5":
