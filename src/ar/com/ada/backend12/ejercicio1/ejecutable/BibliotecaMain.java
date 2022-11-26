@@ -36,6 +36,8 @@ public class BibliotecaMain {
 				break;
 
 			case "2":
+				System.out.println("Estas son las revistas disponibles: ");
+				sanMartin.listarRevistas();
 				break;
 
 			case "3":
