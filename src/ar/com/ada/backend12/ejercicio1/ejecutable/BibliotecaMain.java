@@ -24,13 +24,15 @@ public class BibliotecaMain {
 			String opcion = in.nextLine();
 
 			String codigo;
-			int numero;
+			String numero;
 			String nombreDelPrestatario;
 			String telefonoDelPrestatario;
 			String fechaDelPrestamo;
 
 			switch (opcion) {
 			case "1":
+				System.out.println("Estos son los libros disponibles: ");
+				sanMartin.listarLibros();
 				break;
 
 			case "2":
