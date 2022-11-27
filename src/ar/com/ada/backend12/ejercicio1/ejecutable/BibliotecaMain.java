@@ -1,5 +1,7 @@
 package ar.com.ada.backend12.ejercicio1.ejecutable;
 import static java.lang.Integer.parseInt;
+
+import java.util.HashMap;
 import java.util.Scanner;
 import ar.com.ada.backend12.ejercicio1.modelo.Biblioteca;
 import ar.com.ada.backend12.ejercicio1.modelo.Menu;
@@ -45,7 +47,7 @@ public class BibliotecaMain {
 
 			case "4":
 				System.out.println("Prestar Libros");
-				codigo = obtenerCodigo();
+				codigo = obtenerCodigo("prestar");
 				nombreDelPrestatario = obtenerNombreDelPrestatario();
 				telefonoDelPrestatario = obtenerTelefonoPrestatario();
 				fechaDelPrestamo = obtenerFechaPrestamo();
@@ -56,7 +58,7 @@ public class BibliotecaMain {
 
 			case "5":
 				System.out.println("Prestar Revistas");
-				codigo = obtenerCodigo();
+				codigo = obtenerCodigo("prestar");
 				nombreDelPrestatario = obtenerNombreDelPrestatario();
 				telefonoDelPrestatario = obtenerTelefonoPrestatario();
 				fechaDelPrestamo = obtenerFechaPrestamo();
@@ -77,6 +79,11 @@ public class BibliotecaMain {
 				break;
 
 			case "7":
+				System.out.println("Devolver Libros");
+				codigo = obtenerCodigo("devolver");
+				sanMartin.devolverLibro(codigo);
+				System.out.println("El libro ha sido devuelto con éxito.");
+				System.out.println(sanMartin.obtenerInfoLibro(codigo));
 				break;
 
 			case "8":
@@ -121,8 +128,8 @@ public class BibliotecaMain {
 		return fecha;
 	}
 
-	private static String obtenerCodigo() {
-		String codigo = obtenerString("Ingrese el código de lo que se desea prestar: ");
+	private static String obtenerCodigo(String prestarOdevolver) {
+		String codigo = obtenerString("Ingrese el código de lo que se desea " + prestarOdevolver+ ": ");
 		return codigo;
 	}
 
