@@ -87,6 +87,11 @@ public class BibliotecaMain {
 				break;
 
 			case "8":
+				System.out.println("Devolver Revistas");
+				codigo = obtenerCodigo("devolver");
+				sanMartin.devolverRevista(codigo);
+				System.out.println("La revista ha sido devuelta con éxito.");
+				System.out.println(sanMartin.obtenerInfoRevista(codigo));
 				break;
 
 			case "9":
