@@ -8,7 +8,8 @@ public class Menu {
    
 
     public void imprimirMenu(){
-           System.out.println("\n" +
+           System.out.println("\n        -------- MENU --------");
+           System.out.println(
                    "        1.  Listar libros.\n" +
                    "        2.  Listar revistas.\n" +
                    "        3.  Listar cubiculos.\n" +

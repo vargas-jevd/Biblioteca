@@ -2,6 +2,7 @@ package ar.com.ada.backend12.ejercicio1.ejecutable;
 
 import static java.lang.Integer.parseInt;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 import ar.com.ada.backend12.ejercicio1.modelo.Biblioteca;
@@ -16,8 +17,9 @@ public class BibliotecaMain {
 		sanMartin.llenarBiblioteca(sanMartin);
 		Menu menu = new Menu();
 
+		System.out.println("\n=============================================================");
+		System.out.println("Bienvenido al sistema de Gestión de la Biblioteca San Martin");
 		boolean cierreMientras = true;
-
 		while (cierreMientras) {
 			menu.imprimirMenu();
 			System.out.print("Ingrese una opcion: ");
@@ -46,7 +48,7 @@ public class BibliotecaMain {
 				break;
 
 			case "4":
-				// Prestar Libro
+				System.out.println("Prestar Libros");
 				codigo = obtenerCodigo();
 				nombreDelPrestatario = obtenerNombreDelPrestatario();
 				telefonoDelPrestatario = obtenerTelefonoPrestatario();
@@ -57,6 +59,14 @@ public class BibliotecaMain {
 				break;
 
 			case "5":
+				System.out.println("Prestar Revistas");
+				codigo = obtenerCodigo();
+				nombreDelPrestatario = obtenerNombreDelPrestatario();
+				telefonoDelPrestatario = obtenerTelefonoPrestatario();
+				fechaDelPrestamo = obtenerFechaPrestamo();
+
+				sanMartin.prestarRevista(codigo,nombreDelPrestatario,telefonoDelPrestatario,fechaDelPrestamo);
+				System.out.println(sanMartin.obtenerInfoRevista(codigo));
 				break;
 
 			case "6":
