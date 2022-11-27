@@ -1,9 +1,6 @@
 package ar.com.ada.backend12.ejercicio1.ejecutable;
-
 import static java.lang.Integer.parseInt;
-
 import java.util.Scanner;
-
 import ar.com.ada.backend12.ejercicio1.modelo.Biblioteca;
 import ar.com.ada.backend12.ejercicio1.modelo.Menu;
 
@@ -21,11 +18,11 @@ public class BibliotecaMain {
 		boolean cierreMientras = true;
 		while (cierreMientras) {
 			menu.imprimirMenu();
-			System.out.print("Ingrese una opcion: ");
+			System.out.print("Ingrese una opcion del menú: ");
 			String opcion = in.nextLine();
 
 			String codigo;
-			String numero;
+			int numero;
 			String nombreDelPrestatario;
 			String telefonoDelPrestatario;
 			String fechaDelPrestamo;
@@ -69,6 +66,14 @@ public class BibliotecaMain {
 				break;
 
 			case "6":
+				System.out.println("Prestar Cubículo");
+				numero = obtenerNumero();
+				nombreDelPrestatario = obtenerNombreDelPrestatario();
+				telefonoDelPrestatario = obtenerTelefonoPrestatario();
+				fechaDelPrestamo = obtenerFechaPrestamo();
+
+				sanMartin.prestarCubiculo(numero,nombreDelPrestatario,telefonoDelPrestatario,fechaDelPrestamo);
+				System.out.println(sanMartin.obtenerInfoCubiculo(numero));
 				break;
 
 			case "7":
