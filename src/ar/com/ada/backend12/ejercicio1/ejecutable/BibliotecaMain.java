@@ -66,8 +66,7 @@ public class BibliotecaMain {
 				break;
 
 			case "10":
-				break;
-
+			
 			}
 		}
 		scanner.close();
