@@ -12,7 +12,7 @@ public class Menu {
                    "        1.  Listar libros.\n" +
                    "        2.  Listar revistas.\n" +
                    "        3.  Listar cubiculos.\n" +
-                   "        4.  Prestar libro. K\n" +
+                   "        4.  Prestar libro.\n" +
                    "        5.  Prestar revista.\n" +
                    "        6.  Prestar cubiculo.\n" +
                    "        7.  Devolver libro.\n" +

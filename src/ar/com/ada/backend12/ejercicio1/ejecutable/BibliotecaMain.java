@@ -1,16 +1,17 @@
 package ar.com.ada.backend12.ejercicio1.ejecutable;
 
+import static java.lang.Integer.parseInt;
+
 import java.util.Scanner;
+
 import ar.com.ada.backend12.ejercicio1.modelo.Biblioteca;
 import ar.com.ada.backend12.ejercicio1.modelo.Menu;
 
-import static java.lang.Integer.parseInt;
-
 public class BibliotecaMain {
-	static Scanner scanner;
+	static Scanner in;
 
 	public static void main(String[] args) {
-		scanner = new Scanner(System.in);
+		in = new Scanner(System.in);
 		Biblioteca sanMartin = new Biblioteca();
 		sanMartin.llenarBiblioteca(sanMartin);
 		Menu menu = new Menu();
@@ -20,20 +21,23 @@ public class BibliotecaMain {
 		while (cierreMientras) {
 			menu.imprimirMenu();
 			System.out.print("Ingrese una opcion: ");
-			String opcion = scanner.nextLine();
+			String opcion = in.nextLine();
 
 			String codigo;
-			int numero;
+			String numero;
 			String nombreDelPrestatario;
 			String telefonoDelPrestatario;
 			String fechaDelPrestamo;
 
-
 			switch (opcion) {
 			case "1":
+				System.out.println("Estos son los libros disponibles: ");
+				sanMartin.listarLibros();
 				break;
 
 			case "2":
+				System.out.println("Estas son las revistas disponibles: ");
+				sanMartin.listarRevistas();
 				break;
 
 			case "3":
@@ -46,7 +50,7 @@ public class BibliotecaMain {
 				telefonoDelPrestatario = obtenerTelefonoPrestatario();
 				fechaDelPrestamo = obtenerFechaPrestamo();
 
-				sanMartin.prestarLibro(codigo,nombreDelPrestatario,telefonoDelPrestatario,fechaDelPrestamo);
+				sanMartin.prestarLibro(codigo, nombreDelPrestatario, telefonoDelPrestatario, fechaDelPrestamo);
 				System.out.println(sanMartin.obtenerInfoLibro(codigo));
 				break;
 
@@ -66,16 +70,20 @@ public class BibliotecaMain {
 				break;
 
 			case "10":
-			
+				break;
+
+			default:
+				System.out.println("Ingrese una opción valida.");
 			}
 		}
-		scanner.close();
+		in.close();
 	}
 
-	// ============== Aca termina el MAIN, solo vienen FUNCIONES que usaremos en el main ============
-	private static String obtenerString(String mensaje){
+	// ============== Aca termina el MAIN, solo vienen FUNCIONES que usaremos en el
+	// main ============
+	private static String obtenerString(String mensaje) {
 		System.out.print(mensaje);
-		String salida = scanner.nextLine();
+		String salida = in.nextLine();
 		return salida;
 	}
 
@@ -85,7 +93,8 @@ public class BibliotecaMain {
 	}
 
 	private static String obtenerTelefonoPrestatario() {
-		String telefono = obtenerString("Ingrese el número de telefono del prestatario (xxx) xxx-xx-xxx --> (345) 123-45-67: ");
+		String telefono = obtenerString(
+				"Ingrese el número de telefono del prestatario (xxx) xxx-xx-xxx --> (345) 123-45-67: ");
 		return telefono;
 	}
 
