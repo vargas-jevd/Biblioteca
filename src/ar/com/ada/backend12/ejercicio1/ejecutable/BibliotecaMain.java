@@ -72,6 +72,8 @@ public class BibliotecaMain {
 				break;
 
 			case "10":
+				cierreMientras = false;
+				System.out.println("Chau!");
 				break;
 
 			default:
