@@ -41,6 +41,8 @@ public class BibliotecaMain {
 				break;
 
 			case "3":
+				System.out.println("Los cubiculos disponibles son: ");
+				sanMartin.imprimirCubiculos(sanMartin);
 				break;
 
 			case "4":
