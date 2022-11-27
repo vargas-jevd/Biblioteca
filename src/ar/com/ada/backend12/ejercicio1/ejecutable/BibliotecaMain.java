@@ -69,7 +69,7 @@ public class BibliotecaMain {
 
 			case "6":
 				System.out.println("Prestar Cubículo");
-				numero = obtenerNumero();
+				numero = obtenerNumero("prestar");
 				nombreDelPrestatario = obtenerNombreDelPrestatario();
 				telefonoDelPrestatario = obtenerTelefonoPrestatario();
 				fechaDelPrestamo = obtenerFechaPrestamo();
@@ -82,7 +82,8 @@ public class BibliotecaMain {
 				System.out.println("Devolver Libros");
 				codigo = obtenerCodigo("devolver");
 				sanMartin.devolverLibro(codigo);
-				System.out.println("El libro ha sido devuelto con éxito.");
+				System.out.println("\nEl libro ha sido devuelto con éxito.");
+				System.out.println("Detalle del libro devuelto: ");
 				System.out.println(sanMartin.obtenerInfoLibro(codigo));
 				break;
 
@@ -90,11 +91,18 @@ public class BibliotecaMain {
 				System.out.println("Devolver Revistas");
 				codigo = obtenerCodigo("devolver");
 				sanMartin.devolverRevista(codigo);
-				System.out.println("La revista ha sido devuelta con éxito.");
+				System.out.println("\nLa revista ha sido devuelta con éxito.");
+				System.out.println("Detalle de la revista devuelta: ");
 				System.out.println(sanMartin.obtenerInfoRevista(codigo));
 				break;
 
 			case "9":
+				System.out.println("Devolver Cubículo");
+				numero = obtenerNumero("devolver");
+				sanMartin.devolverCubiculo(numero);
+				System.out.println("\nEl cubículo ha sido devuelto con éxito.");
+				System.out.println("Detalle del cubículo devuelto: ");
+				System.out.println(sanMartin.obtenerInfoCubiculo(numero));
 				break;
 
 			case "10":
@@ -138,8 +146,9 @@ public class BibliotecaMain {
 		return codigo;
 	}
 
-	private static int obtenerNumero() {
-		String numero = obtenerString("Ingrese el código de lo que se desea prestar: ");
+	private static int obtenerNumero(String prestar) {
+		String prestarOdevolver= prestar;
+		String numero = obtenerString("Ingrese el código de lo que se desea " + prestarOdevolver+ ":" );
 		return parseInt(numero);
 	}
 
