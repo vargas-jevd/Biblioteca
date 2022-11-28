@@ -1,7 +1,5 @@
 package ar.com.ada.backend12.ejercicio1.ejecutable;
 import static java.lang.Integer.parseInt;
-
-import java.util.HashMap;
 import java.util.Scanner;
 import ar.com.ada.backend12.ejercicio1.modelo.Biblioteca;
 import ar.com.ada.backend12.ejercicio1.modelo.Menu;
